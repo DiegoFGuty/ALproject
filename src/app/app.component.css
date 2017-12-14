@@ -1,4 +1,3 @@
-
 .container-fluid{
   margin: 0;
   padding: 0;
@@ -21,6 +20,7 @@ button{
   border-radius: 0px;
   margin: 0;
   cursor: pointer;
+  line-height:0;
 }
 
 /*-------------------- NAVBAR STYLE --------------------*/
@@ -30,28 +30,40 @@ button{
 }
 
 #searchDiv{
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 50px;
 }
 
 #optSearch{
   background-color: rgb(51, 51, 51);
+  height: 51px;
+  /* width: 70px; */
   color: white;
   font-size: 16px;
+  vertical-align: top;
 }
 
 #searchInput{
-  height: 30px;
-  width: 30%;
+  height: 51px;
+  width: 35%;
   border: none;
   padding-left: 20px;
+  vertical-align: top;
 }
 
 #btnDoSearch{
   background-color: orangered;
+  height: 51px;
+  width: 51px;
+  vertical-align: center;
 }
 
 #btnOptions{
   background-color: rgb(51, 51, 51);
+  height: 51px;
+  width: 51px;
+  vertical-align: top;
 }
 
 /*-------------------- PAGE STYLE --------------------*/
@@ -61,4 +73,6 @@ button{
   overflow: auto;
   height: 100%;
   padding: 5;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
