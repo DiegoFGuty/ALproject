@@ -3,27 +3,31 @@
   <div class="navbar navbar-fixed-top">
     <div class="container-fluid row">
       <!-- ----------------------------APP-LOGO-HOME-------------------------------- -->
-      <div class="col-lg-1">
+      <div class="col-lg-2">
         <a class="navbar-brand" href="#">SearCh</a>
       </div>
 
       <!-- ----------------------------SEARCH-DIV-------------------------------- -->
-      <div class="col-lg-10 text-center" id="searchDiv">
+      <div class="col-lg-8 text-center" id="searchDiv">
         <form>
-          <select id="optSearch">
+          <!-- <select id="optSearch">
             <option>Any</option>
             <option>Movies</option>
             <option>Actors</option>
-          </select><!--
+          </select> --><!--
        --><input type="search" id="searchInput" placeholder="Type your search"><!--
-       --><button id="btnDoSearch" class="btn btn-default"></button><!--
-       --><button id="btnOptions" class="btn btn-default"></button>
+       --><button id="btnDoSearch" class="btn btn-default">
+            <mat-icon id="search">search</mat-icon>
+          </button><!--
+       --><button id="btnOptions" class="btn btn-default">
+            <mat-icon id="settings">settings</mat-icon>
+          </button>
         </form>
       </div>
 
       <!-- ----------------------------POWERED-BY-------------------------------- -->
-      <div class="col-lg-1">
-        <a class="navbar-brand" href="#">Powered by</a>
+      <div class="col-lg-2" id="poweredByDiv">
+        <img src="assets/images/PoweredByRectangle_Green.svg" alt="Powered by" id="poweredByImg">
       </div>
 
     </div>
@@ -31,18 +35,32 @@
 
   <!-- -----------------------------PAGE---------------------------------- -->
   <div class="container" id="page">
-    <br>
-    <br>
-    <i class="material-icons">&#xE8B8;</i>
-    <i class="material-icons">settings</i>
-    <br>
+    <div class="row" id="filterDiv">
+      <div class="col-lg-9" id="filterDivLeft">
+        <label id="nResults">0 results founded... :/ sry men.</label>
+      </div>
 
-    <br> asd
-    <br> asd
-    <br> asd
-    <br> asd
-    <br> asd
-    <br>
+      <div class="col-lg-3" id="filterDivRigth">
+        <mat-icon id="filter_list">filter_list</mat-icon>
+        <!-- <label id="nResults">We</label> -->
+        <label id="strFilter">FILTER</label>
+
+      </div>
+    </div>
+
+    <mat-grid-list cols="1" rowHeight="2.95:1" gutterSize="10px">
+      <mat-grid-tile class="itemContainer">
+        <div class="col-lg-3" id="itemContainerLeft">
+          <img src="" alt="alternative text" class="itemImage">
+        </div>
+
+        <div class="col-lg-9" id="itemContainerRight">
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>3</mat-grid-tile>
+    </mat-grid-list>
+
   </div>
 
 </div>

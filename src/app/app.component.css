@@ -19,8 +19,10 @@ button{
   border: none;
   border-radius: 0px;
   margin: 0;
+  padding: 0;
   cursor: pointer;
   line-height:0;
+  text-align: center;
 }
 
 /*-------------------- NAVBAR STYLE --------------------*/
@@ -48,6 +50,7 @@ button{
   height: 51px;
   width: 35%;
   border: none;
+  font-size: 17px;
   padding-left: 20px;
   vertical-align: top;
 }
@@ -56,7 +59,14 @@ button{
   background-color: orangered;
   height: 51px;
   width: 51px;
-  vertical-align: center;
+  vertical-align: top;
+}
+
+mat-icon#search{
+  color: white;
+  height: 30px;
+  width: 30px;
+  font-size: 30px !important;
 }
 
 #btnOptions{
@@ -66,6 +76,23 @@ button{
   vertical-align: top;
 }
 
+mat-icon#settings{
+  color: orangered;
+  height: 27px;
+  width: 27px;
+  font-size: 27px !important;
+}
+
+#poweredByDiv{
+  text-align: right;
+  padding: 3px;
+  padding-right: 15px;
+}
+
+#poweredByImg{
+  height: 44px;
+}
+
 /*-------------------- PAGE STYLE --------------------*/
 
 #page{
@@ -73,6 +100,79 @@ button{
   overflow: auto;
   height: 100%;
   padding: 5;
+  padding-top: 15px;
   padding-bottom: 25px;
   margin-bottom: 25px;
+}
+
+#filterDiv{
+  margin: 1px;
+  margin-bottom: 20px;
+  padding-right: 50px;
+  padding-bottom: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: gray;
+}
+
+#filterDivLeft{
+  height: 46.5px;
+}
+
+#nResults{
+  color: gray;
+  position:absolute;
+  bottom:8px;
+  font-size: 16px;
+}
+
+mat-icon#filter_list{
+  color: orangered;
+  height: 32px;
+  width: 32px;
+  font-size: 32px !important;
+  margin-right: 7px;
+}
+
+#strFilter{
+  color: gray;
+  height: 32px;
+  display:inline-block;
+  vertical-align: middle !important;
+}
+
+#filterDivRigth{
+  text-align: right;
+}
+
+/*----------------CONTENT INSIDE THE PAGE ---------------------*/
+
+mat-grid-tile{
+  background-color: rgb(219, 219, 219);
+}
+
+.itemContainer{
+  padding: 0;
+}
+
+#itemContainerLeft{
+  padding: 0;
+  margin: 0;
+  background-color: lightblue;
+  height: 100%;
+}
+
+.itemImage{
+  background-color: lightslategray;
+  color: rgb(41, 41, 41);
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+#itemContainerRight{
+  padding: 0;
+  margin: 0;
+  background-color: lightcoral;
+  height: 100%;
 }

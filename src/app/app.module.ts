@@ -1,22 +1,21 @@
-
 //import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 //Imports for using Material Design
-import {
-  MatAutocompleteModule,
-} from '@angular/material';
+import { MatAutocompleteModule,
+   MatIconModule,
+   MatGridListModule
+   } from "@angular/material";
 
 //import {MatIconModule} from '@angular/material/icon';
 
 //Imports for the application
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-//import { AutocompleteSimpleExample } from './app/autocomplete-simple-example';
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -24,11 +23,15 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
+    MatGridListModule
     // FormsModule,
     // HttpModule,
   ],
   exports: [
 //    MatAutocompleteModule,
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
