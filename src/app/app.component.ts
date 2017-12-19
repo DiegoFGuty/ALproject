@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { FormControl } from "@angular/forms";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css','../../node_modules/material-design-icons/iconfont/material-icons.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: [
+    "./app.component.scss"
+  ]
 })
 export class AppComponent {
-  title = 'app';
+  myControl: FormControl = new FormControl();
+
+  options = ["One", "Two", "Three","El mio :3"];
 }

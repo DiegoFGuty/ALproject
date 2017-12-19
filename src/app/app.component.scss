@@ -1,4 +1,6 @@
-.container-fluid{
+@import '~sass/variables';
+
+.container-fluid {
   margin: 0;
   padding: 0;
 }
@@ -9,35 +11,35 @@ select {
   -ms-appearance: none;
   box-shadow: none;
   outline: 0;
-  border: 0!important;
+  border: 0 !important;
   margin: 0;
   background-image: none;
-  box-shadow: none!important;
+  box-shadow: none !important;
   /*background-image: url(...);   /* add custom arrow */
 }
-button{
+
+button {
   border: none;
   border-radius: 0px;
   margin: 0;
   padding: 0;
   cursor: pointer;
-  line-height:0;
+  line-height: 0;
   text-align: center;
 }
 
 /*-------------------- NAVBAR STYLE --------------------*/
-.navbar{
-  /* color: orangered; */
-  background-color: rgb(24, 24, 24);
+.navbar {
+  background-color: $navbarColor;
 }
 
-#searchDiv{
+#searchDiv {
   margin: 0;
   padding: 0;
   height: 50px;
 }
 
-#optSearch{
+#optSearch {
   background-color: rgb(51, 51, 51);
   height: 51px;
   /* width: 70px; */
@@ -46,7 +48,8 @@ button{
   vertical-align: top;
 }
 
-#searchInput{
+#searchInput {
+  background-color: rgb(245, 245, 245);
   height: 51px;
   width: 35%;
   border: none;
@@ -55,48 +58,48 @@ button{
   vertical-align: top;
 }
 
-#btnDoSearch{
-  background-color: orangered;
+#btnDoSearch {
+  background-color: $orange;
   height: 51px;
   width: 51px;
   vertical-align: top;
 }
 
-mat-icon#search{
-  color: white;
+mat-icon#search {
+  color: rgb(245, 245, 245);
   height: 30px;
   width: 30px;
   font-size: 30px !important;
 }
 
-#btnOptions{
+#btnOptions {
   background-color: rgb(51, 51, 51);
   height: 51px;
   width: 51px;
   vertical-align: top;
 }
 
-mat-icon#settings{
-  color: orangered;
+mat-icon#settings {
+  color: $orange;
   height: 27px;
   width: 27px;
   font-size: 27px !important;
 }
 
-#poweredByDiv{
+#poweredByDiv {
   text-align: right;
   padding: 3px;
   padding-right: 15px;
 }
 
-#poweredByImg{
+#poweredByImg {
   height: 44px;
 }
 
 /*-------------------- PAGE STYLE --------------------*/
 
-#page{
-  background-color: rgb(243, 243, 243);
+#page {
+  background-color: $pageColor;
   overflow: auto;
   height: 100%;
   padding: 5;
@@ -105,64 +108,63 @@ mat-icon#settings{
   margin-bottom: 25px;
 }
 
-#filterDiv{
+#filterDiv {
   margin: 1px;
   margin-bottom: 20px;
   padding-right: 50px;
   padding-bottom: 3px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: gray;
+  border-bottom-color: rgb(128,128,128);
 }
 
-#filterDivLeft{
+#filterDivLeft {
   height: 46.5px;
 }
 
-#nResults{
+#nResults {
   color: gray;
-  position:absolute;
-  bottom:8px;
+  position: absolute;
+  bottom: 8px;
   font-size: 16px;
 }
 
-mat-icon#filter_list{
-  color: orangered;
+mat-icon#filter_list {
+  color: $orange;
   height: 32px;
   width: 32px;
   font-size: 32px !important;
   margin-right: 7px;
 }
 
-#strFilter{
+#strFilter {
   color: gray;
   height: 32px;
-  display:inline-block;
+  display: inline-block;
   vertical-align: middle !important;
 }
 
-#filterDivRigth{
+#filterDivRigth {
   text-align: right;
 }
 
-/*----------------CONTENT INSIDE THE PAGE ---------------------*/
+/*---------------- ITEM'S CONTENT ---------------------*/
 
-mat-grid-tile{
+mat-grid-tile {
   background-color: rgb(219, 219, 219);
 }
 
-.itemContainer{
+.itemContainer {
   padding: 0;
 }
 
-#itemContainerLeft{
+.itemContainerLeft {
   padding: 0;
   margin: 0;
-  background-color: lightblue;
   height: 100%;
 }
 
-.itemImage{
+.itemImage {
   background-color: lightslategray;
   color: rgb(41, 41, 41);
   height: 100%;
@@ -170,9 +172,51 @@ mat-grid-tile{
   display: block;
 }
 
-#itemContainerRight{
-  padding: 0;
+.itemContainerRight {
+  padding: 10px;
   margin: 0;
-  background-color: lightcoral;
   height: 100%;
+}
+
+.itemHeader {
+  display: flex;
+  padding: 0;
+}
+
+.itemHeader > h2 {
+  padding-bottom: 10px;
+}
+
+.itemHeaderRight {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.itemHeaderRight > span {
+  font-size: 20px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.starIcon {
+  color: $orange;
+  height: 32px;
+  width: 32px;
+  font-size: 32px !important;
+}
+
+.itemBody {
+  font-size: 16px;
+}
+
+.itemFooter {
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  right: 0px;
+  text-align: right;
 }
