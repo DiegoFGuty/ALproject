@@ -1,0 +1,25 @@
+<!-- -----------------------------SEARCH PAGE---------------------------------- -->
+<div class="container" id="page">
+  <!-- -----------------------------FILTER DIV---------------------------------- -->
+  <div class="row" id="filterDiv">
+    <div class="col-lg-12" id="filterDivLeft">
+      <label id="nResults">{{results.length}} results</label>
+    </div>
+
+    <!-- Para habilitar el filterDivRigth, al filterDivLeft se le debe poner col-lg-9 -->
+    <!-- <div class="col-lg-3" id="filterDivRigth">
+      <mat-icon id="filter_list">filter_list</mat-icon>
+      <label id="strFilter">FILTER</label>
+    </div> -->
+  </div>
+
+  <!-- -----------------------------RESULTS---------------------------------- -->
+  <mat-grid-list cols="1" rowHeight="2.95:1" gutterSize="10px">
+
+    <mat-grid-tile class="itemContainer" *ngFor="let result of results">
+      <app-result-item [inputNumber]="result"></app-result-item>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>

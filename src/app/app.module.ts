@@ -14,9 +14,14 @@ import { MatAutocompleteModule,
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
+import { SearchPageComponent } from './search-page/search-page.component';
+import { ResultItemComponent } from './result-item/result-item.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchPageComponent,
+    ResultItemComponent
   ],
   imports: [
     BrowserModule,
