@@ -1,20 +1,51 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+  <!-- ----------------------------NAV-BAR-------------------------------- -->
+  <div class="navbar navbar-fixed-top">
+    <div class="container-fluid row">
+      <!-- ----------------------------APP-LOGO-HOME-------------------------------- -->
+      <div class="col-lg-2">
+        <a class="navbar-brand" href="#">SearCh</a>
+      </div>
 
+      <!-- ----------------------------SEARCH-DIV-------------------------------- -->
+      <div class="col-lg-8 text-center" id="searchDiv">
+        <form>
+          <!-- <select id="optSearch">
+            <option>Any</option>
+            <option>Movies</option>
+            <option>Actors</option>
+          </select> --><!--
+       --><input type="text" id="searchInput" placeholder="Type your search" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"><!--
+       --><mat-autocomplete #auto="matAutocomplete">
+            <mat-optgroup label="Movies">
+                <mat-option *ngFor="let movie of movies_Auto | slice:0:4" [value]="movie">
+                    {{ movie }}
+                </mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="People">
+                <mat-option *ngFor="let person of people_Auto | slice:0:4" [value]="person">
+                    {{ person }}
+                </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete><!--
+       --><button id="btnDoSearch" class="btn btn-default">
+            <mat-icon id="search">search</mat-icon>
+          </button><!--
+       <button id="btnOptions" class="btn btn-default">
+            <mat-icon id="settings">settings</mat-icon>
+          </button>-->
+        </form>
+      </div>
+
+      <!-- ----------------------------POWERED-BY-------------------------------- -->
+      <div class="col-lg-2" id="poweredByDiv">
+        <img src="assets/images/PoweredByRectangle_Green.svg" alt="Powered by" id="poweredByImg">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ----------------------------SEARCH-PAGE-------------------------------- -->
+  <app-search-page [results]="resultads"></app-search-page>
+
+</div>

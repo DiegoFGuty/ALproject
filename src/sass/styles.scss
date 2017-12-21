@@ -1,0 +1,15 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import './variables';
+
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: gray!important;
+  margin: 0;
+  padding: 0;
+  padding-top: 90px; /*50px for the height of the navbar + 40px for the offset*/
+}
+
+app-root{
+  margin: 0;
+  padding: 0;
+}

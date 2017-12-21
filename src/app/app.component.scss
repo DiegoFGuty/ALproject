@@ -1,0 +1,103 @@
+@import '~sass/variables';
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  box-shadow: none;
+  outline: 0;
+  border: 0 !important;
+  margin: 0;
+  background-image: none;
+  box-shadow: none !important;
+  /*background-image: url(...);   /* add custom arrow */
+}
+
+button {
+  border: none;
+  border-radius: 0px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+  text-align: center;
+}
+
+/*-------------------- NAVBAR STYLE --------------------*/
+.navbar {
+  background-color: $navbarColor;
+}
+
+#searchDiv {
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+#optSearch {
+  background-color: rgb(51, 51, 51);
+  height: 51px;
+  /* width: 70px; */
+  color: white;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+#searchInput {
+  background-color: rgb(245, 245, 245);
+  height: 51px;
+  width: 35%;
+  border: none;
+  font-size: 17px;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+#btnDoSearch {
+  background-color: $orange;
+  height: 51px;
+  width: 51px;
+  vertical-align: top;
+}
+
+mat-icon#search {
+  color: rgb(245, 245, 245);
+  height: 30px;
+  width: 30px;
+  font-size: 30px !important;
+}
+
+#btnOptions {
+  background-color: rgb(51, 51, 51);
+  height: 51px;
+  width: 51px;
+  vertical-align: top;
+}
+
+mat-icon#settings {
+  color: $orange;
+  height: 27px;
+  width: 27px;
+  font-size: 27px !important;
+}
+
+#poweredByDiv {
+  text-align: right;
+  padding: 3px;
+  padding-right: 15px;
+}
+
+#poweredByImg {
+  height: 44px;
+}
+
+/*-------------------- AUTOCOMPLETE STYLE --------------------*/
+
+mat-option{
+  height: 30px;
+}
