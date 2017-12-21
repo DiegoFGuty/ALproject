@@ -17,9 +17,16 @@
           </select> --><!--
        --><input type="text" id="searchInput" placeholder="Type your search" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto"><!--
        --><mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of options" [value]="option">
-              {{ option }}
-            </mat-option>
+            <mat-optgroup label="Movies">
+                <mat-option *ngFor="let movie of movies_Auto | slice:0:4" [value]="movie">
+                    {{ movie }}
+                </mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="People">
+                <mat-option *ngFor="let person of people_Auto | slice:0:4" [value]="person">
+                    {{ person }}
+                </mat-option>
+            </mat-optgroup>
           </mat-autocomplete><!--
        --><button id="btnDoSearch" class="btn btn-default">
             <mat-icon id="search">search</mat-icon>
@@ -38,6 +45,7 @@
     </div>
   </div>
 
-  <app-search-page></app-search-page>
+  <!-- ----------------------------SEARCH-PAGE-------------------------------- -->
+  <app-search-page [results]="resultads"></app-search-page>
 
 </div>

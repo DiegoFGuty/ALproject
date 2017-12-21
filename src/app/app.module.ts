@@ -16,6 +16,7 @@ import { HttpModule } from "@angular/http";
 
 import { SearchPageComponent } from './search-page/search-page.component';
 import { ResultItemComponent } from './result-item/result-item.component';
+import { ConsultaApiService } from './consulta-api.service';
 
 @NgModule({
   declarations: [
@@ -29,15 +30,15 @@ import { ResultItemComponent } from './result-item/result-item.component';
     MatGridListModule,
     MatAutocompleteModule,
     FormsModule,
-    ReactiveFormsModule
-    // HttpModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
   exports: [
     MatAutocompleteModule,
     MatIconModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [ConsultaApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
