@@ -10,6 +10,12 @@ export class ResultItem {
   **/
   private name:string;
 
+  /*
+  **/
+  private genres: string[];
+
+  private knownFor: string[];
+
   constructor() {}
 
   getType() {
