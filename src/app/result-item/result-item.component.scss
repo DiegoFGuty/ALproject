@@ -7,11 +7,14 @@
 }
 
 .itemImage {
-  background-color: lightslategray;
-  color: rgb(41, 41, 41);
+  background-color: rgb(99, 99, 99);
+  font-size: 24px;
+  color: $pageColor;
   height: 100%;
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .itemContainerRight {
